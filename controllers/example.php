@@ -23,9 +23,9 @@ class Example extends CI_Controller
     {
         parent::__construct();
         // load from spark
-        $this->load->spark('codeigniter-log-library/1.0.0');
+        //$this->load->spark('codeigniter-log/1.0.0');
         // load from CI library
-        //$this->load->library('lib_log');
+        $this->load->library('lib_log');
     }
 
     /**
