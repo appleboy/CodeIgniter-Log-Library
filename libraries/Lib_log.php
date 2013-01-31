@@ -28,6 +28,24 @@ class Lib_log
      */
     private $_log_table_name;
 
+    public $levels = array(
+        E_ERROR             => 'Error',
+        E_WARNING           => 'Warning',
+        E_PARSE             => 'Parsing Error',
+        E_NOTICE            => 'Notice',
+        E_CORE_ERROR        => 'Core Error',
+        E_CORE_WARNING      => 'Core Warning',
+        E_COMPILE_ERROR     => 'Compile Error',
+        E_COMPILE_WARNING   => 'Compile Warning',
+        E_USER_ERROR        => 'User Error',
+        E_USER_WARNING      => 'User Warning',
+        E_USER_NOTICE       => 'User Notice',
+        E_STRICT            => 'Runtime Notice',
+        E_RECOVERABLE_ERROR => 'Catchable error',
+        E_DEPRECATED        => 'Runtime Notice',
+        E_USER_DEPRECATED   => 'User Warning'
+    );
+
     /**
      * constructor
      *
@@ -57,6 +75,7 @@ class Lib_log
     {
         $data = array(
             'errno' => $severity,
+            'errtype' => isset($this->levels[$severity]) ? $this->levels[$severity] : $severity,
             'errstr' => $message,
             'errfile' => $filepath,
             'errline' => $line,
@@ -77,6 +96,7 @@ class Lib_log
     {
         $data = array(
             'errno' => $exception->getCode(),
+            'errtype' => isset($this->levels[$exception->getCode()]) ? $this->levels[$exception->getCode()] : $exception->getCode(),
             'errstr' => $exception->getMessage(),
             'errfile' => $exception->getFile(),
             'errline' => $exception->getLine(),
