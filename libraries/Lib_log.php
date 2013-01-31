@@ -83,7 +83,6 @@ class Lib_log
         );
 
         $this->_ci->db->insert($this->_log_table_name, $data);
-        var_dump($data);
     }
 
     /**
