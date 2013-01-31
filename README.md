@@ -70,3 +70,8 @@ throw new Exception('Error: Division by zero.', E_USER_ERROR);
 ```
 
 Please refer the example controller (``controllers/example.php``).
+
+Screenshot
+
+![mysql log](https://farm9.staticflickr.com/8077/8431391071_7970f8fc05_c.jpg)
+
