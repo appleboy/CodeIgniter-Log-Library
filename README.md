@@ -63,4 +63,10 @@ trigger_error("Warning error via trigger.", E_USER_WARNING);
 trigger_error("Notice error via trigger.", E_USER_NOTICE);
 ```
 
-Please refer the example controller.
+use php exception:
+
+```php
+throw new Exception('Error: Division by zero.', E_USER_ERROR);
+```
+
+Please refer the example controller (``controllers/example.php``).
