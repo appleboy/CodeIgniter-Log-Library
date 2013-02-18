@@ -69,7 +69,7 @@ class Lib_log
      * @param   string
      * @param   string
      * @param   int
-     * @return  void
+     * @return void
      */
     public function error_handler($severity, $message, $filepath, $line)
     {
@@ -89,7 +89,7 @@ class Lib_log
      * PHP Error Handler
      *
      * @param   object
-     * @return  void
+     * @return void
      */
     public function exception_handler($exception)
     {
