@@ -10,6 +10,8 @@ CREATE TABLE IF NOT EXISTS `logs` (
   `errstr` text CHARACTER SET utf8 NOT NULL,
   `errfile` varchar(255) CHARACTER SET utf8 NOT NULL,
   `errline` int(4) NOT NULL,
+  `user_agent` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `ip_address` varchar(64) CHARACTER SET utf8 NOT NULL,
   `time` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;

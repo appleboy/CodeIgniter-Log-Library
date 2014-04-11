@@ -79,6 +79,8 @@ class Lib_log
             'errstr' => $message,
             'errfile' => $filepath,
             'errline' => $line,
+            'user_agent' => $this->_ci->input->user_agent(),
+            'ip_address' => $this->_ci->input->ip_address(),
             'time' => date('Y-m-d H:i:s')
         );
 
@@ -99,6 +101,8 @@ class Lib_log
             'errstr' => $exception->getMessage(),
             'errfile' => $exception->getFile(),
             'errline' => $exception->getLine(),
+            'user_agent' => $this->_ci->input->user_agent(),
+            'ip_address' => $this->_ci->input->ip_address(),
             'time' => date('Y-m-d H:i:s')
         );
 
