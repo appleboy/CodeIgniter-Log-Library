@@ -1,10 +1,8 @@
-CodeIgniter-Log-Library
-=======================
+# CodeIgniter-Log-Library
 
 Store all php error or exception logs into database.
 
-Installation
-=======================
+# Installation
 
 Create log table on your database. SQL structure is available on ``sql/mysql.sql``
 
@@ -36,19 +34,18 @@ You can install via codeigniter spark or step by step from following instruction
 
 You can install via http://getsparks.org/packages/codeigniter-log/show
 
-    $ php tools/spark install -v1.0.0 codeigniter-log
+    $ php tools/spark install -v1.0.1 codeigniter-log
 
 Finally excute via command line.
 
     $ php index.php example
 
-Usage
-=======================
+# Usage
 
 load library from spark:
 
 ```php
-$this->load->spark('codeigniter-log/1.0.0');
+$this->load->spark('codeigniter-log/1.0.1');
 ```
 
 or load library from codeigniter loader
@@ -76,4 +73,3 @@ Please refer the example controller (``controllers/example.php``).
 Screenshot
 
 ![mysql log](https://farm9.staticflickr.com/8077/8431391071_7970f8fc05_c.jpg)
-
